@@ -1,0 +1,22 @@
+# GitHub Pages Configuration
+# This file ensures proper deployment settings
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Site settings
+title: "GitHub Links Converter"
+description: "Convert between GitHub repository links and GitHub Pages links"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+# Exclude files from processing
+exclude:
+  - test.js
+  - node_modules/
+  - vendor/
+
+# Include files in processing
+include:
+  - .htaccess
