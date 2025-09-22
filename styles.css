@@ -1,0 +1,167 @@
+/* Custom styles for GitHub Links Converter */
+
+/* Enhanced animations and transitions */
+.button {
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.125em rgba(102, 126, 234, 0.25);
+}
+
+/* Gradient background for hero section */
+.hero.is-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Enhanced box shadows */
+.box {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease;
+}
+
+.box:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Result section styling */
+.result-box {
+    border-left: 4px solid #00d1b2;
+    background-color: #f0fffe;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.error-box {
+    border-left: 4px solid #ff3860;
+    background-color: #fef0f0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Loading animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.is-loading::after {
+    animation: spin 1s linear infinite;
+}
+
+/* Notification improvements */
+.notification {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Copy icon hover effect */
+.icon.is-right i {
+    transition: color 0.3s ease;
+}
+
+.icon.is-right i:hover {
+    color: #3273dc;
+}
+
+/* Code styling in examples */
+code {
+    background-color: #f5f5f5;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    word-break: break-all;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .hero .title {
+        font-size: 2rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.25rem;
+    }
+    
+    .button.is-large {
+        font-size: 1rem;
+    }
+    
+    .input.is-large {
+        font-size: 1rem;
+    }
+}
+
+/* Focus states for accessibility */
+.button:focus,
+.input:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* Success state for copy button */
+.button.is-success-temp {
+    background-color: #48c774 !important;
+    border-color: #48c774 !important;
+    color: #fff !important;
+}
+
+/* Pulse animation for notifications */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.notification.pulse {
+    animation: pulse 0.5s ease-in-out;
+}
+
+/* Enhanced message section */
+.message-section {
+    margin-top: 1rem;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #fafafa;
+    padding: 2rem 1.5rem;
+}

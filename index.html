@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Links Converter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero is-primary is-medium">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1">
+                    <i class="fab fa-github mr-3"></i>
+                    GitHub Links Converter
+                </h1>
+                <p class="subtitle is-4">
+                    Convert between GitHub repository links and GitHub Pages links
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="box">
+                        <h2 class="title is-3 has-text-centered mb-6">
+                            <i class="fas fa-exchange-alt mr-2"></i>
+                            Link Converter
+                        </h2>
+
+                        <!-- Input Section -->
+                        <div class="field">
+                            <label class="label">Enter GitHub Link</label>
+                            <div class="control has-icons-left">
+                                <input 
+                                    class="input is-large" 
+                                    type="text" 
+                                    id="linkInput" 
+                                    placeholder="https://github.com/username/repo/blob/main/path/file.html"
+                                >
+                                <span class="icon is-left">
+                                    <i class="fas fa-link"></i>
+                                </span>
+                            </div>
+                            <p class="help">
+                                Enter either a GitHub repository link or a GitHub Pages link
+                            </p>
+                        </div>
+
+                        <!-- Buttons Section -->
+                        <div class="field is-grouped is-grouped-centered mt-5">
+                            <div class="control">
+                                <button class="button is-primary is-large" id="convertBtn">
+                                    <span class="icon">
+                                        <i class="fas fa-magic"></i>
+                                    </span>
+                                    <span>Convert Link</span>
+                                </button>
+                            </div>
+                            <div class="control">
+                                <button class="button is-light is-large" id="clearBtn">
+                                    <span class="icon">
+                                        <i class="fas fa-times"></i>
+                                    </span>
+                                    <span>Clear</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Result Section -->
+                        <div id="resultSection" class="mt-6" style="display: none;">
+                            <div class="field">
+                                <label class="label">Converted Link</label>
+                                <div class="control has-icons-right">
+                                    <input 
+                                        class="input is-medium" 
+                                        type="text" 
+                                        id="resultInput" 
+                                        readonly
+                                    >
+                                    <span class="icon is-right">
+                                        <i class="fas fa-copy" id="copyIcon" style="cursor: pointer;" title="Copy to clipboard"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="buttons is-centered mt-4">
+                                <button class="button is-info" id="copyBtn">
+                                    <span class="icon">
+                                        <i class="fas fa-copy"></i>
+                                    </span>
+                                    <span>Copy Link</span>
+                                </button>
+                                <button class="button is-success" id="openBtn">
+                                    <span class="icon">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </span>
+                                    <span>Open Link</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Error/Info Section -->
+                        <div id="messageSection" class="mt-4"></div>
+                    </div>
+
+                    <!-- Examples Section -->
+                    <div class="box mt-6">
+                        <h3 class="title is-4">
+                            <i class="fas fa-lightbulb mr-2"></i>
+                            Examples
+                        </h3>
+                        
+                        <div class="content">
+                            <div class="columns">
+                                <div class="column">
+                                    <h5 class="subtitle is-6">GitHub Repository Link:</h5>
+                                    <div class="notification is-light">
+                                        <code>https://github.com/username/repo/blob/main/path/file.html</code>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <h5 class="subtitle is-6">GitHub Pages Link:</h5>
+                                    <div class="notification is-light">
+                                        <code>https://username.github.io/repo/path/file.html</code>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="message is-info">
+                                <div class="message-body">
+                                    <strong>Note:</strong> The converter works both ways! You can convert from repository links to Pages links and vice versa.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>GitHub Links Converter</strong> - Made with 
+                <span class="has-text-danger">
+                    <i class="fas fa-heart"></i>
+                </span>
+                using <a href="https://bulma.io">Bulma CSS</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
